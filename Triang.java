@@ -11,13 +11,15 @@ public class Triang {
 		int b = in.nextInt();
 		int c = in.nextInt();
 		
-		if(a == b && a != c && b != c || a == c && a != b && c != b || b == c && b != a && c != a) { // Needs less redundancy!!
-			System.out.println("Triângulo isósceles");
+		if ((a==b && b!=c ) || (a!=b && c==a) || (c==b && c!=a)) { 
+			System.out.println("Triângulo Isósceles");
 		}
-		else if(a == b && a == c && b == c) {
+		
+		else if(a == b && b == c) {
 			System.out.println("Triângulo equilátero");
-		}
-		else {
+		} 
+		
+		else { 
 			System.out.println("Triângulo escaleno");
 		}
 	}
