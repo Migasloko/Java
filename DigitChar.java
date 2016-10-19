@@ -2,16 +2,16 @@ import java.util.Scanner;
 
 public class DigitChar {
 	public static void main(String[] args) {
-		
+
 		Scanner in = new Scanner(System.in);
-		
+
 		System.out.print("Digito e Valor? ");
-		
-	    char digito = in.next().charAt(0);
+
+	  char digito = in.next().charAt(0);
 		int valor = in.nextInt();
-		
+
 		if(digito >= 'A' && digito <= 'Z' || digito >= 'a' && digito <= 'z') {
-			System.out.println(digito + " não é dígito.");
+			System.out.println(digito + " nÃ£o Ã© dÃ­gito.");
 		}
 		else {
 			int soma = digito + valor;
