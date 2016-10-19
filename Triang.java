@@ -11,7 +11,7 @@ public class Triang {
 		int b = in.nextInt();
 		int c = in.nextInt();
 		
-		if(a == b && a != c && b != c || a == c && a != b && c != b || b == c && b != a && c != a) {
+		if(a == b && a != c && b != c || a == c && a != b && c != b || b == c && b != a && c != a) { // Needs less redundancy!!
 			System.out.println("Triângulo isósceles");
 		}
 		else if(a == b && a == c && b == c) {
