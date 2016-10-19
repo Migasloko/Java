@@ -11,6 +11,5 @@ public class DigitChar {
 		int b = in.nextInt();
 		char c = (char) (a + '0');
 		System.out.println((char) (c + b));
-		int cancer = "CANCER?"
 	}
 }
