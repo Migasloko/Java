@@ -1,26 +1,27 @@
 import java.util.Scanner;
 
-public class Triang {
-	public static void main(String[] args) {
-
+public class Triang{
+	public static void main (String[] args){
+		
 		Scanner in = new Scanner(System.in);
-
-		System.out.print("Valores dos lados? ");
-
+		
+		//Variaveis de input do utilizador
 		int a = in.nextInt();
 		int b = in.nextInt();
 		int c = in.nextInt();
-
-		if ((a==b && b!=c ) || (a!=b && c==a) || (c==b && c!=a)) {
-			System.out.println("Triângulo Isósceles");
-		}
-
-		else if(a == b && b == c) {
-			System.out.println("Triângulo equilátero");
-		}
-
-		else {
-			System.out.println("Triângulo escaleno");
-		}
+		
+		
+		// Compara�oes para cada tipo de triangulo
+		if ((a+b) == (2*c))
+			System.out.println("Triangulo equilatero.");
+				
+				else if ((a-b)*(a-c)==0 || b==c)
+					System.out.println("Triangulo isosceles.");
+				
+				else 
+					System.out.println("Triangulo escaleno.");
+					
+		
+		
 	}
 }

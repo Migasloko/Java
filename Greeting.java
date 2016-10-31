@@ -6,29 +6,29 @@ public class Greeting {
 	public static void main(String[] args) {
 		
 		Scanner in = new Scanner(System.in);
+		System.out.print("Hora(auto)? ");
+		
+		int time; // variavel que guarda o tempo 
+		
+		if(in.hasNextInt()) // verificar se input é um valor inteiro ou uma palavra
+			time = in.nextInt();
+		else
+			time = LocalTime.now().getHour();
 		
 		System.out.print("Nome? ");
 		
-		String name = in.nextLine();
+		String a = in.nextLine(); // String para input do nome 
+		String nome = in.nextLine();
 		
-		System.out.print("Hora(auto)? ");
- 
-		char a = in.next().charAt(0);
-		
-		if(a == 'a') {
-			int time = LocalTime.now().getHour();	
+		// Enquadramento do cumprimento baseado na hora do dia
+		if(time > 7 && time < 12) {
+			System.out.println("Bom dia " + nome);
 		}
-		else {
-			int time = (int) a;
+		else if(time > 11 && time < 18) {
+			System.out.println("Boa tarde " + nome);
 		}
-		if(time > 6 && time < 12) {
-			System.out.println("Bom dia " + name);
+		else if(time > 18 && time < 24 || time >=0 && time <= 6) {
+			System.out.println("Boa noite " + nome);
 		}
-		else if(time > 11 && time < 19) {
-			System.out.println("Boa tarde " + name);
-		}
-		else {
-			System.out.println("Boa noite " + name);
-		}	
 	}
 }
